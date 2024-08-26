@@ -1,0 +1,16 @@
+{
+    "packages": [
+      "k9s@0.32.5",
+      "kubectl@1.30.2",
+      "kind@0.24.0",
+      "eksctl@0.189.0",
+      "wget2@2.1.0"
+    ],
+    "shell": {
+      "init_hook": [
+        "alias k=kubectl",
+        "export GPG_TTY=$(tty)"
+      ]
+    }
+  }
+  
