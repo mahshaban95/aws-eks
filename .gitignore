@@ -1,0 +1,26 @@
+# Terraform
+.terraform/
+.terraform*
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+# Devbox
+.devbox/
+.devbox.json
+.devbox.yaml
+devbox.lock
+
+# General
+.vscode/
+.idea/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+ehthumbs.db

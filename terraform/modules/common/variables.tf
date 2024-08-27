@@ -24,26 +24,26 @@ output "cluster_name" {
 variable "tag_env_name" {
   description = "Environment"
   type        = string
-  default     = "Dev"
+  default     = "dev"
 }
 
 variable "tag_owner" {
   description = "Owner"
   type        = string
-  default     = "Mahmoud Shaaban"
+  default     = "mahmoud-shaaban"
 }
 
 variable "tag_project" {
   description = "Project"
   type        = string
-  default     = "Fawaterak K8s"
+  default     = "fawaterak-k8s"
 }
 
 output "default_tags" {
   value = {
-    Environment = var.tag_env_name
-    Owner       = var.tag_owner
-    Project     = var.tag_project
+    environment = var.tag_env_name
+    owner       = var.tag_owner
+    project     = var.tag_project
   }
 }
 

@@ -4,7 +4,7 @@
 
 # The AWS provider is needed but we will get it from the shared module
 module "common" {
-  source = "../modules/common"
+  source = "../../modules/common"
 }
 provider "aws" {
   region = module.common.region
@@ -22,13 +22,8 @@ provider "aws" {
 # with managed node groups
 data "aws_availability_zones" "available" {}
 locals {
-  cluster_version = "1.30"
   vpc_cidr        = "10.0.0.0/16"
   azs             = slice(data.aws_availability_zones.available.names, 0, 2)
-}
-
-data "aws_iam_role" "eks_admins" {
-  name = "eks-admin" ## To Be Changed
 }
 
 ################################################################################
@@ -64,7 +59,7 @@ module "vpc" {
 #######  Outputs
 ###################################################################
 
-output "test" {
-  value = module.common.default_tags
-  description = "This is just a test"
+output "vpc_id" {
+  value = module.vpc.vpc_id
+  description = "The ID of the VPC"
 }
