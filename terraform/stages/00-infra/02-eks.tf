@@ -109,3 +109,19 @@ output "eks_cluster_arn" {
   value = module.eks.cluster_arn
   description = "The ARN of the EKS cluster"
 }
+
+output "cluster_endpoint" {
+  description = "Endpoint for EKS control plane"
+  value       = module.eks.cluster_endpoint
+}
+
+
+output "oidc_provider_arn" {
+  description = "The ARN of the OIDC Provider if `enable_irsa = true`."
+  value       = module.eks.oidc_provider_arn
+}
+
+output "cluster_version" {
+  description = "The Kubernetes server version of the EKS cluster"
+  value       = module.eks.cluster_version
+}
